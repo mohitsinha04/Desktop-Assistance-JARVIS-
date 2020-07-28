@@ -36,3 +36,7 @@ You can use these commands:
         11. time : Current system time
         12. top stories from google news (RSS feeds)
         13. tell me about xyz : tells you about xyz
+        
+        
+        
+This Project is inspired by https://towardsdatascience.com/build-your-first-voice-assistant-85a5a49f6cc1
