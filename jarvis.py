@@ -118,7 +118,7 @@ def assistant(command):
         reg_ex = re.search('current weather in (.*)', command)
         if reg_ex:
             city = reg_ex.group(1)
-            owm = OWM(API_key='*****************')
+            owm = OWM(API_key='f719fc3c1496996fba0c33440cc8baea')
             obs = owm.weather_at_place(city)
             w = obs.get_weather()
             k = w.get_status()
