@@ -141,8 +141,8 @@ def assistant(command):
             mail = smtplib.SMTP('smtp.gmail.com', 587)
             mail.ehlo()
             mail.starttls()
-            mail.login('nageshsinghc@gmail.com', '*************')
-            mail.sendmail('nageshsingh4@gmail.com', 'amdp.hauhan@gmail.com', content)
+            mail.login('mohitsinha1108@gmail.com', '*************')
+            mail.sendmail('mohitsinha1108@gmail.com', 'carsvally40@gmail.com' , content)
             mail.close()
             JarvisResponse('Email has been sent successfuly. You can check your inbox.')
         else:
@@ -160,7 +160,7 @@ def assistant(command):
 
     #play youtube song
     elif 'play me a song' in command:
-        path = '/Users/nageshsinghchauhan/Documents/videos/'
+        path = '/Users/mohitsinha04/Documents/videos/'
         folder = path
         for the_file in os.listdir(folder):
             file_path = os.path.join(folder, the_file)
@@ -198,7 +198,7 @@ def assistant(command):
 
     #change wallpaper
     elif 'change wallpaper' in command:
-        folder = '/Users/nageshsinghchauhan/Documents/wallpaper/'
+        folder = '/Users/mohitsinha04/Documents/wallpaper/'
         for the_file in os.listdir(folder):
             file_path = os.path.join(folder, the_file)
             try:
@@ -206,14 +206,14 @@ def assistant(command):
                     os.unlink(file_path)
             except Exception as e:
                 print(e)
-        api_key = '***************'
+        api_key = ''
         url = 'https://api.unsplash.com/photos/random?client_id=' + api_key #pic from unspalsh.com
         f = urllib2.urlopen(url)
         json_string = f.read()
         f.close()
         parsed_json = json.loads(json_string)
         photo = parsed_json['urls']['full']
-        urllib.urlretrieve(photo, "/Users/nageshsinghchauhan/Documents/wallpaper/a") # Location where we download the image to.
+        urllib.urlretrieve(photo, "/Users/mohitsinha04/Documents/wallpaper/a") # Location where we download the image to.
         subprocess.call(["killall Dock"], shell=True)
         JarvisResponse('wallpaper changed successfully')
 
